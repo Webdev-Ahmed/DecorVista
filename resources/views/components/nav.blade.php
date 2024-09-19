@@ -1,6 +1,8 @@
 <nav id="nav-bar"
-  class="flex justify-between fixed w-full max-md:px-4 bg-white/60 duration-300 transition-colors backdrop-blur-md items-center px-12 py-2 z-[99]">
-  <h6 class="text-3xl max-md:text-2xl font-semibold">DecorVista</h6>
+  class="flex justify-between fixed w-full max-md:px-4 bg-white/60 duration-300 transition-colors backdrop-blur-md items-center px-12 py-2 z-[999]">
+  <h1 class="text-3xl max-md:text-2xl font-semibold">
+    <a href="/">DecorVista</a>
+  </h1>
 
   <ul class="flex space-x-4 items-center max-md:hidden">
     <li><a href="/products">Products</a></li>
