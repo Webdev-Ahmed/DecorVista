@@ -1,4 +1,4 @@
-@props(['title' => 'DecorVista | Interior Designer'])
+@props(['title' => 'DecorVista | Interior Designer', 'nav' => false, 'class' => '', 'margin' => false])
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,11 @@
 </head>
 <body>
 
-    <main>
+    @if ($nav)
+      <x-nav />
+    @endif
+
+    <main class="{{ $margin ? "mx-12" : "mx-0" }} {{ $class }}">
         {{ $slot }}
     </main>
 

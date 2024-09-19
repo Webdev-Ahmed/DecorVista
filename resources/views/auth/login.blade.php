@@ -1,6 +1,6 @@
 <x-layout>
   <section class="flex">
-    <div class="w-[70%] h-screen rounded-xl overflow-hidden rounded-l-none bg-red-500">
+    <div class="w-[70%] h-screen rounded-xl overflow-hidden rounded-l-none">
       <img class="w-full h-full object-cover" src="images/pexels-fotios-photos-1090638.jpg" alt="Login Image">
     </div>
 
@@ -12,12 +12,12 @@
 
       <div class="flex flex-col mb-4">
         <label for="username" class="text-sm">Username:</label>
-        <input class="p-2 w-full bg-emerald-50 rounded-xl" type="text" id="username" name="username" required>
+        <input placeholder="Enter your username" class="px-2 py-1.5 placeholder:text-sm placeholder:text-emerald-950/40 w-full bg-emerald-50 rounded-xl" type="text" id="username" name="username" required>
       </div>
 
       <div class="flex flex-col mb-2">
         <label for="password"  class="text-sm">Password:</label>
-        <input class="p-2 w-full bg-emerald-50 rounded-xl" type="text" id="password" name="password" required>
+        <input placeholder="Enter your password" class="px-2 py-1.5 placeholder:text-sm placeholder:text-emerald-950/40 w-full bg-emerald-50 rounded-xl" type="text" id="password" name="password" required>
       </div>
 
       <div class="flex text-sm">
