@@ -43,7 +43,7 @@
     </div>
   </section>
 
-  <section class="h-[600px] w-full flex gap-x-6">
+  <section class="h-[600px] w-full flex gap-x-6 pb-24">
     <div class="w-1/2 h-full rounded-xl overflow-hidden">
       <img src="images/pexels-houzlook-3356416.jpg" class="w-full h-full" alt="">
     </div>
@@ -53,6 +53,18 @@
       <h1 class="text-7xl font-semibold">Timeless Charm</h1>
       <p class="text-lg w-[50ch] mt-6 leading-normal4">Discover DecorVista's 2024 preview, featuring stunning designs, awesome products, and much more ✨</p>
       <button class="px-4 py-2 mt-6 w-fit hover:bg-neutral-950 hover:text-neutral-100 transition-colors rounded-full border-neutral-950 border-[1px]">See More!</button>
+    </div>
+  </section>
+</x-layout>
+
+<x-layout>
+  <section class="h-[600px] flex items-center px-12 bg-black">
+    <div class="w-1/2">
+      <h1 class="text-white text-7xl leading-normal font-semibold">Engage with us in</h1>
+      <h1 class="text-white text-7xl leading-normal font-semibold">Conversation.</h1>
+    </div>
+    <div class="w-1/2 flex items-center justify-center">
+      <img src="images/pexels-pixabay-271624.jpg" class="w-[600px] rounded-xl object-cover">
     </div>
   </section>
 </x-layout>
