@@ -26,20 +26,33 @@
 
   <section class="flex py-16 px-[15%] justify-between">
     <div class="flex flex-col gap-y-3">
-      <h1 class="text-7xl font-semibold">500+</h1>
+      <h1 class="text-7xl font-medium">500+</h1>
       <p class="text-neutral-950/50 text-lg">Products</p>
     </div>
     <div class="flex flex-col gap-y-3">
-      <h1 class="text-7xl font-semibold">20+</h1>
+      <h1 class="text-7xl font-medium">20+</h1>
       <p class="text-neutral-950/50 text-lg">Designers</p>
     </div>
     <div class="flex flex-col gap-y-3">
-      <h1 class="text-7xl font-semibold">50+</h1>
+      <h1 class="text-7xl font-medium">50+</h1>
       <p class="text-neutral-950/50 text-lg">Satisfied Customers</p>
     </div>
     <div class="flex flex-col gap-y-3">
-      <h1 class="text-7xl font-semibold">1<sup>st</sup></h1>
+      <h1 class="text-7xl font-medium">1<sup>st</sup></h1>
       <p class="text-neutral-950/50 text-lg">Top 1 in Pakistan</p>
+    </div>
+  </section>
+
+  <section class="h-[600px] w-full flex gap-x-6">
+    <div class="w-1/2 h-full rounded-xl overflow-hidden">
+      <img src="images/pexels-houzlook-3356416.jpg" class="w-full h-full" alt="">
+    </div>
+    <div class="flex flex-col justify-center">
+      <span class="text-lg mb-6">Elegence ⋅ Timeless</span>
+      <h1 class="text-7xl font-semibold mb-3">Modern Style</h1>
+      <h1 class="text-7xl font-semibold">Timeless Charm</h1>
+      <p class="text-lg w-[50ch] mt-6 leading-normal4">Discover DecorVista's 2024 preview, featuring stunning designs, awesome products, and much more ✨</p>
+      <button class="px-4 py-2 mt-6 w-fit hover:bg-neutral-950 hover:text-neutral-100 transition-colors rounded-full border-neutral-950 border-[1px]">See More!</button>
     </div>
   </section>
 </x-layout>
