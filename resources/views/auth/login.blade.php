@@ -12,21 +12,21 @@
 
       <div class="flex flex-col mb-4">
         <label for="username" class="text-sm">Username:</label>
-        <input placeholder="Enter your username" class="px-2 py-1.5 placeholder:text-sm placeholder:text-emerald-950/40 w-full bg-emerald-50 rounded-xl" type="text" id="username" name="username" required>
+        <input placeholder="Enter your username" class="py-1.5 placeholder:text-sm placeholder:text-orange-950/40 w-full bg-orange-50/70 border-[1px] mt-2 border-orange-950/10 rounded-full px-4" type="text" id="username" name="username" required>
       </div>
 
       <div class="flex flex-col mb-2">
         <label for="password"  class="text-sm">Password:</label>
-        <input placeholder="Enter your password" class="px-2 py-1.5 placeholder:text-sm placeholder:text-emerald-950/40 w-full bg-emerald-50 rounded-xl" type="text" id="password" name="password" required>
+        <input placeholder="Enter your password" class="py-1.5 placeholder:text-sm placeholder:text-orange-950/40 w-full bg-orange-50/70 border-[1px] mt-2 border-orange-950/10 rounded-full px-4" type="text" id="password" name="password" required>
       </div>
 
       <div class="flex text-sm">
         <p>Don't have an account?</p>
         &nbsp;
-        <a href="/register" class="text-emerald-500">Sign Up</a>
+        <a href="/register" class="text-orange-500">Sign Up</a>
       </div>
 
-      <button class="w-full bg-emerald-500 p-2 rounded-lg mt-2 hover:bg-emerald-600 transition-colors text-white">Login</button>
+      <button class="px-4 py-2 hover:bg-neutral-950 hover:text-neutral-100 transition-colors rounded-full border-neutral-950 border-[1px] mt-2" type="submit">Login</button>
     </form>
   </section>
 </x-layout>
