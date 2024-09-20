@@ -15,6 +15,7 @@
 
       <x-input name='password' required="required" type="password" placeholder='Enter your password'>Password</x-input>
 
+
       <div class="flex text-sm">
         <p>Don't have an account?</p>
         &nbsp;
