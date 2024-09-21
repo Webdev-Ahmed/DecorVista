@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\ValidationException;
+
+use function PHPUnit\Framework\returnSelf;
 
 class AuthController extends Controller
 {
@@ -21,28 +24,23 @@ class AuthController extends Controller
 
   function store(Request $req)
   {
-    //return $req;
-     $req->validate([
-      'name' => ['required'],
+    $req->validate([
+      'firstName' => ['required'],
       'username' => ['required', 'unique:users'],
       'email' => ['required', 'unique:users'],
       'password' => ['required', 'confirmed', 'min:6'],
     ]);
 
-    // $user=user::create($validator);
     $user = new User();
-    $user->name = $req->name;
+    $user->firstName = $req->firstName;
+    $user->lastName = $req->lastName;
     $user->username = $req->username;
     $user->email = $req->email;
-    $user->contact = $req->contact;
     $user->role = 'user';
-    $user->address = $req->address;
     $user->password = $req->password;
     $user->save();
 
-    // return $user;
     return redirect()->to('/login');
-
   }
 
   function login(Request $req)
@@ -58,6 +56,25 @@ class AuthController extends Controller
       ]);
     }
 
+    $user = User::where('username', '=', $req->username)->first();
+
+    session_start();
+    session(['user' => [
+      'firstName' => $user->firstName,
+      'lastName' => $user->lastName,
+      'username' => $user->username,
+      'email' => $user->email,
+      'role' => $user->role,
+      'password' => $user->password,
+    ]]);
+
+    return redirect()->to('/');
+  }
+
+  function logout()
+  {
+    Auth::logout();
+    session_reset();
     return redirect()->to('/');
   }
 }

@@ -17,21 +17,33 @@
       <img src="images/pexels-fotios-photos-1090638.jpg" class="w-full h-full object-cover" alt="Register Image">
     </div>
 
-    <form method="POST" action="/registerSubmit"
+    <form method="POST" action="/auth/register"
       class="flex flex-col max-md:w-full max-md:absolute max-md:h-full max-md:bg-white/80 w-[30%] p-8 justify-center">
       @csrf
 
       <h1 class="text-4xl text-center mb-6 font-bold tracking-tighter">Register</h1>
 
-      <div class="flex flex-col mb-4">
-        <label for="name" class="text-sm">Name:</label>
-        <input placeholder="Enter your name"
-          class="py-1.5 placeholder:text-sm placeholder:text-orange-950/40 w-full bg-orange-50/70 border-[1px] mt-2 border-orange-950/10 max-md:border-orange-950/60 rounded-full px-4"
-          type="text" id="name" name="name" required>
+      <div class="flex gap-x-2">
+        <div class="flex flex-col mb-4">
+          <label for="firstName" class="text-sm">First Name:</label>
+          <input placeholder="Enter your First Name"
+            class="py-1.5 placeholder:text-sm placeholder:text-orange-950/40 w-full bg-orange-50/70 border-[1px] mt-2 border-orange-950/10 max-md:border-orange-950/60 rounded-full px-4"
+            type="text" id="firstName" name="firstName" required>
 
-        @error('name')
-        <span class="text-red-500 text-xs mt-1">{{$message}}</p>
-        @enderror
+          @error('firstName')
+          <span class="text-red-500 text-xs mt-1">{{$message}}</p>
+          @enderror
+        </div>
+        <div class="flex flex-col mb-4">
+          <label for="lastName" class="text-sm">Last Name:</label>
+          <input placeholder="Enter your Last Name (optional)"
+            class="py-1.5 placeholder:text-sm placeholder:text-orange-950/40 w-full bg-orange-50/70 border-[1px] mt-2 border-orange-950/10 max-md:border-orange-950/60 rounded-full px-4"
+            type="text" id="lastName" name="lastName">
+
+          @error('lastName')
+          <span class="text-red-500 text-xs mt-1">{{$message}}</p>
+          @enderror
+        </div>
       </div>
 
       <div class="flex flex-col mb-4">

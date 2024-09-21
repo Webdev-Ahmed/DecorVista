@@ -9,14 +9,29 @@
     <li><a href="/gallery">Gallery</a></li>
     <li><a href="/appoint">Appoint</a></li>
     <li><a href="/panel">Panel</a></li>
+    @guest
+      <li>
+        <a href="/login">
+          <button
+            class="px-3 py-1 hover:bg-neutral-950 hover:text-neutral-100 transition-colors rounded-full border-neutral-950 border-[1px]">
+            Login
+          </button>
+        </a>
+      </li>
+    @endguest
+    @auth
     <li>
-      <a href="/login">
+      <form method="POST" action="/auth/logout">
+        @csrf
         <button
+          type="submit"
           class="px-3 py-1 hover:bg-neutral-950 hover:text-neutral-100 transition-colors rounded-full border-neutral-950 border-[1px]">
-          Login
-        </button>
-      </a>
-    </li>
+            Logout
+            {{session('user.firstName')}}
+          </button>
+        </form>
+      </li>
+    @endauth
   </ul>
 
   <div class="md:hidden">

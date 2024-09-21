@@ -4,7 +4,7 @@
       <img class="w-full h-full object-cover" src="images/pexels-fotios-photos-1090638.jpg" alt="Login Image">
     </div>
 
-    <form method="POST" action="/login"
+    <form method="POST" action="/auth/login"
       class="flex flex-col max-md:w-[100%] max-md:absolute max-md:bg-white/80 max-md:h-full w-[30%] p-8 justify-center">
       @csrf
       @method('POST')
