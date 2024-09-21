@@ -21,15 +21,15 @@ class AuthController extends Controller
 
   function store(Request $req)
   {
-    $validator = $req->validate([
-      'name' => ['required', 'min:3'],
+    //return $req;
+     $req->validate([
+      'name' => ['required'],
       'username' => ['required', 'unique:users'],
       'email' => ['required', 'unique:users'],
-      'password' => ['required', 'min:8', 'confirmed'],
-      'contact' => ['required'],
-      'address' => ['required']
+      'password' => ['required', 'confirmed', 'min:6'],
     ]);
 
+    // $user=user::create($validator);
     $user = new User();
     $user->name = $req->name;
     $user->username = $req->username;
@@ -40,7 +40,9 @@ class AuthController extends Controller
     $user->password = $req->password;
     $user->save();
 
-    return redirect('/login');
+    // return $user;
+    return redirect()->to('/login');
+
   }
 
   function login(Request $req)
@@ -52,10 +54,10 @@ class AuthController extends Controller
 
     if (!Auth::attempt($validator)) {
       throw ValidationException::withMessages([
-        'email' => 'Credentials wrong!'
+        'username' => 'Credentials wrong!'
       ]);
     }
 
-    return redirect('/');
+    return redirect()->to('/');
   }
 }
