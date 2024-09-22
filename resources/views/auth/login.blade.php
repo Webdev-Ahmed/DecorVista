@@ -1,4 +1,11 @@
 <x-layout class="!px-0">
+  @if (Session::has('message'))
+    <div
+      class="absolute px-4 py-2 font-semibold top-4 left-1/2 -translate-x-1/2 rounded-xl flex text-lg bg-red-50 text-red-600">
+      {{ Session::get('message') }}
+    </div>
+  @endif
+
   <section class="flex">
     <div class="w-[70%] max-md:w-[100%] h-screen rounded-xl overflow-hidden rounded-l-none">
       <img class="w-full h-full object-cover" src="images/pexels-fotios-photos-1090638.jpg" alt="Login Image">

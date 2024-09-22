@@ -4,7 +4,7 @@
       <h1
         class="text-8xl max-lg:text-7xl max-md:text-6xl max-sm:text-5xl left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 absolute font-bold text-white z-[99]">
         Designing </h1>
-      <img src="images/pexels-charlotte-may-5825527.jpg" alt="Home"
+      <img src="{{ asset('images/pexels-charlotte-may-5825527.jpg') }}" alt="Home"
         class="w-full h-full object-cover filter brightness-75">
     </div>
   </section>
