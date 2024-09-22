@@ -6,7 +6,6 @@
 
   <ul class="flex space-x-4 items-center max-md:hidden">
     <li><a href="/products">Products</a></li>
-    <li><a href="/gallery">Gallery</a></li>
     <li><a href="/appoint">Appoint</a></li>
     <li><a href="/panel">Panel</a></li>
     @guest
@@ -20,14 +19,12 @@
       </li>
     @endguest
     @auth
-    <li>
-      <form method="POST" action="/auth/logout">
-        @csrf
-        <button
-          type="submit"
-          class="px-3 py-1 hover:bg-neutral-950 hover:text-neutral-100 transition-colors rounded-full border-neutral-950 border-[1px]">
+      <li>
+        <form method="POST" action="/auth/logout">
+          @csrf
+          <button type="submit"
+            class="px-3 py-1 hover:bg-neutral-950 hover:text-neutral-100 transition-colors rounded-full border-neutral-950 border-[1px]">
             Logout
-            {{session('user.firstName')}}
           </button>
         </form>
       </li>

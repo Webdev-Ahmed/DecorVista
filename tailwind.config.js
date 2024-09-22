@@ -6,10 +6,9 @@ export default {
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue",
-    extract,
   ],
   theme: {
     extend: {},
   },
-  plugins: [fluid],
+  plugins: [],
 };

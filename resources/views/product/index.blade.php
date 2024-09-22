@@ -10,7 +10,7 @@
   </section>
 
   <section
-    class="w-full grid grid-cols-4 max-md:gap-4 mb-12 max-md:pb-4 max-lg:grid-cols-2 max-sm:grid-cols-1 max-xl:grid-cols-3 gap-6 h-auto">
+    class="w-full grid grid-cols-4 max-md:gap-4 mb-12 max-md:pb-4 max-lg:grid-cols-2 max-sm:grid-cols-1 max-xl:grid-cols-3 gap-2 h-auto">
     @foreach ($products as $product)
       <a href="/products/{{ $product->id }}">
         <div class="aspect-square bg-neutral-100 rounded-xl overflow-hidden p-3">

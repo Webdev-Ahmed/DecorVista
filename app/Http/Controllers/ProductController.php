@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Product;
-use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
@@ -19,8 +18,8 @@ class ProductController extends Controller
 
   public function create()
   {
-    if (!Auth::check()) {
-      return redirect()->to('/login')->with('message', 'You need to login first');
+    if (!Auth::check() || session('user.role') == 'user') {
+      return redirect()->to('/login')->with('message', 'You need to login first or be an interior designer');
     }
 
     $category = Category::all();
@@ -29,6 +28,9 @@ class ProductController extends Controller
 
   public function store(Request $req)
   {
+    if (!Auth::check() || session('user.role') == 'user') {
+      return json_encode(['message' => 'You need to login first or be an interior designer']);
+    }
 
     $req->validate([
       'name' => ['required', 'min:1'],

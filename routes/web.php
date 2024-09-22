@@ -1,13 +1,18 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PanelController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 
 Route::view('/', 'home');
-Route::view('/gallery', 'gallery');
+// Route::view('/gallery', 'gallery');
 Route::view('/appoint', 'appoint');
+
+Route::get('/panel', [PanelController::class, 'index']);
+Route::get('/panel/users', [PanelController::class, 'users']);
+Route::get('/panel/products', [PanelController::class, 'products']);
 
 Route::get('/login', [AuthController::class, 'index']);
 Route::get('/register', [AuthController::class, 'create']);
